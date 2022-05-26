@@ -8,36 +8,29 @@
 
 #include "Censista.h"
 
-eCensista censistas[] ={
-		{100, "Ana", 34, 1203-2345},
-		{101, "Juan", 24, 4301-54678},
-		{102, "Sol", 47, 5902-37487}
-		};
-
-
 void mostrarCensista(eCensista censista)
 {
-	printf("%d%s%d%d\n", censista.legajoCensista,
-						censista.nombre,
-						censista.edad,
-						censista.telefono);
+	printf(" %-8d %-8s %-6d %s\n", censista.legajoCensista,
+								   censista.nombre,
+								   censista.edad,
+								   censista.telefono);
 }
 
-int mostrarCensistas(eCensista* lista, int tam)
+int mostrarCensistas(eCensista* censistas, int tam)
 {
 	int retorno = -1;
 	int flagVacio = 1;
 
-	if(lista != NULL && tam > 0)
+	if(censistas != NULL && tam > 0)
 	{
 		system("cls");
 		printf("     CENSISTAS\n");
-		printf(" LEGAJO   NOMBRE   EDAD   TELEFONO");
-		printf("-------------------------------------------\n");
+		printf(" LEGAJO\t NOMBRE\t EDAD\t TELEFONO\n");
+		printf("-----------------------------------------\n");
 
 		for(int i = 0; i < tam; i++)
 		{
-			mostrarCensista(lista[i]);
+			mostrarCensista(censistas[i]);
 			flagVacio = 0;
 		}
 

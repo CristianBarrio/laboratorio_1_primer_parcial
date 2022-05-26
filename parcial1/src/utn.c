@@ -8,7 +8,7 @@
 
 #include "utn.h"
 
-int myGets(char *cadena, int longitud)
+int myGets(char* cadena, int longitud)
 {
 	int retorno = -1;
 	if (cadena != NULL && longitud > 0 && fgets(cadena, longitud, stdin) == cadena)
@@ -23,7 +23,7 @@ int myGets(char *cadena, int longitud)
 	return retorno;
 }
 
-int getInt(int *pResultado)
+int getInt(int* pResultado)
 {
 	int retorno = -1;
 	char buffer[64];
@@ -39,7 +39,7 @@ int getInt(int *pResultado)
 	return retorno;
 }
 
-int esNumerica(char *cadena)
+int esNumerica(char* cadena)
 {
 	int i = 0;
 	int retorno = 1;
@@ -58,7 +58,7 @@ int esNumerica(char *cadena)
 	return retorno;
 }
 
-int utn_getInt(int *pResultado, char *mensaje, char *mensajeError, int minimo, int maximo)
+int utn_getInt(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo)
 {
 	int bufferInt;
 	int retorno = -1;
@@ -80,7 +80,7 @@ int utn_getInt(int *pResultado, char *mensaje, char *mensajeError, int minimo, i
 	return retorno;
 }
 
-int getFloat(float *pResultado)
+int getFloat(float* pResultado)
 {
 	int retorno = -1;
 	char buffer[64];
@@ -96,7 +96,7 @@ int getFloat(float *pResultado)
 	return retorno;
 }
 
-int utn_getFloat(float *pResultado, char *mensaje, char *mensajeError, float minimo, float maximo)
+int utn_getFloat(float* pResultado, char* mensaje, char* mensajeError, float minimo, float maximo)
 {
 	float bufferFloat;
 	int retorno = -1;

@@ -10,6 +10,7 @@
 
 #include "utn.h"
 #include "Censista.h"
+#include "Tipo.h"
 #define TAM_CALLE 25
 
 typedef struct
@@ -19,17 +20,89 @@ typedef struct
 	int cantidadPersonas;
 	int cantidadHabitaciones;
 	int tipoVivienda;
+	int legajoCensista;
 	int isEmpty;
-	eCensista legajoCensista;
 }eVivienda;
 
 #endif /* VIVIENDA_H_ */
 
+/**
+ *
+ * @param lista
+ * @param tam
+ * @return
+ */
 int inicializarVivienda(eVivienda* lista, int tam);
+
+/**
+ *
+ * @param lista
+ * @param tam
+ * @param id
+ * @param calle
+ * @param cantidadPersonas
+ * @param cantidadHabitaciones
+ * @param tipo
+ * @param legajoCensista
+ * @return
+ */
 int altaVivienda(eVivienda* lista, int tam, int id, char* calle, int cantidadPersonas, int cantidadHabitaciones, int tipo, int legajoCensista);
+
+/**
+ *
+ * @param lista
+ * @param tam
+ * @param id
+ * @return
+ */
 int buscarViviendaPorId(eVivienda* lista, int tam, int id);
-int modificarVivienda(eVivienda* lista, int tam, int id, char* calle, int cantidadPersonas, int cantidadHabitaciones, int tipo);
+
+/**
+ *
+ * @param lista
+ * @param tam
+ * @param id
+ * @param calle
+ * @param cantidadPersonas
+ * @param cantidadHabitaciones
+ * @param tipo
+ * @param tipos
+ * @param tamT
+ * @return
+ */
+int modificarVivienda(eVivienda* lista, int tam, int id, char* calle, int cantidadPersonas, int cantidadHabitaciones, int tipo, eTipo* tipos, int tamT);
+
+/**
+ *
+ * @param lista
+ * @param tam
+ * @param id
+ * @return
+ */
 int bajaVivienda(eVivienda* lista, int tam, int id);
-void mostrarVivienda(eVivienda vivienda);
-int mostrarViviendas(eVivienda* lista, int tam);
+
+/**
+ *
+ * @param vivienda
+ * @param tam
+ * @param tipos
+ */
+void mostrarVivienda(eVivienda vivienda, int tam, eTipo* tipos);
+
+/**
+ *
+ * @param lista
+ * @param tam
+ * @param tipos
+ * @param tamT
+ * @return
+ */
+int mostrarViviendas(eVivienda* lista, int tam, eTipo* tipos, int tamT);
+
+/**
+ *
+ * @param lista
+ * @param tam
+ * @return
+ */
 int ordenarViviendas(eVivienda* lista, int tam);

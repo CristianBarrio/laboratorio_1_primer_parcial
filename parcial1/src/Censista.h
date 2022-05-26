@@ -9,17 +9,28 @@
 #define CENSISTA_H_
 
 #include "utn.h"
-#define TAM_NOMBRE 51
+#define TAM_NOMBRE 25
 
 typedef struct
 {
 	int legajoCensista;
-	char nombre[51];
+	char nombre[TAM_NOMBRE];
 	int edad;
-	int telefono;
+	char telefono[15];
 }eCensista;
 
 #endif /* CENSISTA_H_ */
 
+/**
+ *
+ * @param censista
+ */
 void mostrarCensista(eCensista censista);
-int mostrarCensistas(eCensista* lista, int tam);
+
+/**
+ *
+ * @param censistas
+ * @param tam
+ * @return
+ */
+int mostrarCensistas(eCensista* censistas, int tam);

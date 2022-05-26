@@ -17,25 +17,25 @@
 
 /** Pide una cadena y cambia el ultimo elemento de '\n' a \0'
  *
- * @param cadena
- * @param longitud
- * @return retorna -1 si hubo un error, de lo contrario 0
+ * @param cadena char*
+ * @param longitud int tamaño de la cadena
+ * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
-int myGets(char *cadena, int longitud);
+int myGets(char* cadena, int longitud);
 
 /** Recibe una cadena y devuelve 1 si el texto solo esta compuesto por numeros
  *
  * @param pResultado
- * @return retorna -1 si hubo un error, de lo contrario 0
+ * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
-int getInt(int *pResultado);
+int getInt(int* pResultado);
 
 /** recorre la cadena para verificar que todos sus elementos sean numericos
  *
  * @param cadena
- * @return retorna -1 si hubo un error, de lo contrario 0
+ * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
-int esNumerica(char *cadena);
+int esNumerica(char* cadena);
 
 /** Recibe un texto convertido a entero, imprime un mensaje y un mensaje de error
  *
@@ -44,16 +44,16 @@ int esNumerica(char *cadena);
  * @param mensajeError
  * @param minimo
  * @param maximo
- * @return retorna -1 si hubo un error, de lo contrario 0
+ * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
-int utn_getInt(int *pResultado, char *mensaje, char *mensajeError, int minimo, int maximo);
+int utn_getInt(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo);
 
 /** Pide un texto, lo almacena como cadena, valida y lo convierte a numero
  *
  * @param pResultado
- * @return retorna -1 si hubo un error, de lo contrario 0
+ * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
-int getFloat(float *pResultado);
+int getFloat(float* pResultado);
 
 /**
  *
@@ -62,18 +62,27 @@ int getFloat(float *pResultado);
  * @param mensajeError
  * @param minimo
  * @param maximo
- * @return retorna -1 si hubo un error, de lo contrario 0
+ * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
-int utn_getFloat(float *pResultado, char *mensaje, char *mensajeError, float minimo, float maximo);
+int utn_getFloat(float* pResultado, char* mensaje, char* mensajeError, float minimo, float maximo);
 
 /** recibe un texto y valida que sea solo compuesto por caracteres
  *
  * @param cadena
  * @param mensaje
  * @param mensajeError
- * @return retorna -1 si hubo un error, de lo contrario 0
+ * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
 int utn_getName(char* cadena, char* mensaje, char* mensajeError);
 
+/** Menu de opciones del ABM
+ *
+ * @return opcion seleccionada del menu
+ */
 int menu();
+
+/** Menu de opciones de la modificacion de viviendas
+ *
+ * @return opcion seleccionada del menu
+ */
 int menuModificacion();
