@@ -25,14 +25,14 @@ int myGets(char* cadena, int longitud);
 
 /** Recibe una cadena y devuelve 1 si el texto solo esta compuesto por numeros
  *
- * @param pResultado
+ * @param pResultado int*
  * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
 int getInt(int* pResultado);
 
-/** recorre la cadena para verificar que todos sus elementos sean numericos
+/** Recorre la cadena para verificar que todos sus elementos sean numericos
  *
- * @param cadena
+ * @param cadena char*
  * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
 int esNumerica(char* cadena);

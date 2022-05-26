@@ -2,7 +2,7 @@
  ============================================================================
  Name        : Lab1Parcial1.c
  Author      : Barrio Cristian
- Version     : Finalizado
+ Version     : Finalizado1
  Copyright   : Your copyright notice
  Description : Hello World in C, Ansi-style
  ============================================================================

@@ -26,15 +26,15 @@ typedef struct
 
 #endif /* VIVIENDA_H_ */
 
-/**
+/** Indica que todas las posiciones del array estan vacias
  *
- * @param lista
- * @param tam
- * @return
+ * @param lista eVivienda* array de viviendas
+ * @param tam int tamaño del array
+ * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
 int inicializarVivienda(eVivienda* lista, int tam);
 
-/**
+/** Agrega una vivienda al primer espacio vacio del array de viviendas
  *
  * @param lista
  * @param tam
@@ -44,20 +44,20 @@ int inicializarVivienda(eVivienda* lista, int tam);
  * @param cantidadHabitaciones
  * @param tipo
  * @param legajoCensista
- * @return
+ * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
 int altaVivienda(eVivienda* lista, int tam, int id, char* calle, int cantidadPersonas, int cantidadHabitaciones, int tipo, int legajoCensista);
 
-/**
+/** Busca una vivienda por su ID en el array de viviendas
  *
  * @param lista
  * @param tam
  * @param id
- * @return
+ * @return indice int devuelve una posicion libre o -1 si hubo un problema
  */
 int buscarViviendaPorId(eVivienda* lista, int tam, int id);
 
-/**
+/** Permite modificar alguno de los datos correspondientes a una vivienda
  *
  * @param lista
  * @param tam
@@ -68,20 +68,20 @@ int buscarViviendaPorId(eVivienda* lista, int tam, int id);
  * @param tipo
  * @param tipos
  * @param tamT
- * @return
+ * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
 int modificarVivienda(eVivienda* lista, int tam, int id, char* calle, int cantidadPersonas, int cantidadHabitaciones, int tipo, eTipo* tipos, int tamT);
 
-/**
+/** Permite dar de baja una vivienda, vaciando su posicion en el array
  *
  * @param lista
  * @param tam
  * @param id
- * @return
+ * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
 int bajaVivienda(eVivienda* lista, int tam, int id);
 
-/**
+/** Informa los datos pertenecientes a una vivienda
  *
  * @param vivienda
  * @param tam
@@ -89,20 +89,20 @@ int bajaVivienda(eVivienda* lista, int tam, int id);
  */
 void mostrarVivienda(eVivienda vivienda, int tam, eTipo* tipos);
 
-/**
+/** Informa los datos pertenecientes a todas las viviendas del array
  *
  * @param lista
  * @param tam
  * @param tipos
  * @param tamT
- * @return
+ * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
 int mostrarViviendas(eVivienda* lista, int tam, eTipo* tipos, int tamT);
 
-/**
+/** Ordena a las viviendas por calle y ante igualdad de calle, por la cantidad de habitantes, de mayor a menor
  *
  * @param lista
  * @param tam
- * @return
+ * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
 int ordenarViviendas(eVivienda* lista, int tam);

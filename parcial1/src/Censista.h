@@ -21,16 +21,16 @@ typedef struct
 
 #endif /* CENSISTA_H_ */
 
-/**
+/** Muestra los datos pertenecientes a un censista
  *
- * @param censista
+ * @param censista eCensista
  */
 void mostrarCensista(eCensista censista);
 
-/**
+/** Muestra los datos pertenecientes a todos los censistas del array
  *
- * @param censistas
- * @param tam
- * @return
+ * @param censistas eCensista* lista de censistas
+ * @param tam int tamaño del array de censistas
+ * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
 int mostrarCensistas(eCensista* censistas, int tam);
