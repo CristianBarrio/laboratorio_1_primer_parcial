@@ -2,7 +2,7 @@
  ============================================================================
  Name        : Lab1Parcial1.c
  Author      : Barrio Cristian
- Version     : Finalizado1
+ Version     : Finalizado
  Copyright   : Your copyright notice
  Description : Hello World in C, Ansi-style
  ============================================================================
@@ -16,7 +16,6 @@
 
 #define TAM 1000
 #define TAM_C 3
-
 
 int main(void) {
 	setbuf(stdout,NULL);

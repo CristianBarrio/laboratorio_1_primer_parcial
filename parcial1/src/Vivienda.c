@@ -182,7 +182,7 @@ void mostrarVivienda(eVivienda vivienda, int tam, eTipo* tipos)
 {
 	char descripcionTipo[15];
 
-	cargarDescripcionTipo(tipos, TAM_T, vivienda.tipoVivienda, descripcionTipo);
+	cargarDescripcionTipo(tipos, tam, vivienda.tipoVivienda, descripcionTipo);
 
 	printf("%-6d %-10s %-16d %-13d %-12s %d\n", vivienda.idVivienda,
 										 vivienda.calle,
