@@ -40,9 +40,7 @@ int main(void) {
 	int auxCantidadPersonas = 0;
 	int auxCantidadHabitaciones = 0;
 	int auxTipo = 0;
-
-	int auxLegajoCensista = 103;
-
+	int auxLegajoCensista = 1;
 	int flagIngreso = 0;
 	int continuar = 0;
 
@@ -59,12 +57,14 @@ int main(void) {
 				{
 					printf("Alta realizada con exito.\n");
 					auxId++;
-					auxLegajoCensista++;
 					flagIngreso = 1;
+				}else
+				{
+					printf("Hubo un problema al realizar el alta.\n");
 				}
 				break;
 			case 2:
-				if(flagIngreso && modificarVivienda(viviendas, TAM, auxId, auxCalle, auxCantidadPersonas, auxCantidadHabitaciones, auxTipo, tipos, TAM_T) == 0)
+				if(flagIngreso && modificarVivienda(viviendas, TAM, auxId, auxCalle, auxCantidadPersonas, auxCantidadHabitaciones, auxTipo, tipos, TAM_T, censistas) == 0)
 				{
 					printf("Modificacion realizada con exito.\n");
 				}else
@@ -85,7 +85,8 @@ int main(void) {
 				if(flagIngreso)
 				{
 					ordenarViviendas(viviendas, TAM);
-					mostrarViviendas(viviendas, TAM, tipos, TAM_T);
+					mostrarViviendas(viviendas, TAM, tipos, TAM_T, censistas);
+					contadorCensos(viviendas, TAM);
 				}else
 				{
 					printf("No se pueden realizar informes sin haber ingresado viviendas.\n");

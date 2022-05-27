@@ -70,8 +70,7 @@ int buscarViviendaPorId(eVivienda* lista, int tam, int id);
  * @param tamT int tamaño del array de tipos
  * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
-int modificarVivienda(eVivienda* lista, int tam, int id, char* calle, int cantidadPersonas, int cantidadHabitaciones, int tipo, eTipo* tipos, int tamT);
-
+int modificarVivienda(eVivienda* lista, int tam, int id, char* calle, int cantidadPersonas, int cantidadHabitaciones, int tipo, eTipo* tipos, int tamT, eCensista* censistas);
 /** Permite dar de baja una vivienda, vaciando su posicion en el array
  *
  * @param lista eVivienda* array de viviendas
@@ -87,7 +86,7 @@ int bajaVivienda(eVivienda* lista, int tam, int id);
  * @param tam int tamaño del array de tipos
  * @param tipos eTipo* array de tipos
  */
-void mostrarVivienda(eVivienda vivienda, int tam, eTipo* tipos);
+void mostrarVivienda(eVivienda vivienda, int tam, eTipo* tipos, eCensista censista);
 
 /** Informa los datos pertenecientes a todas las viviendas del array
  *
@@ -97,7 +96,7 @@ void mostrarVivienda(eVivienda vivienda, int tam, eTipo* tipos);
  * @param tamT int tamaño del array de tipos
  * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
-int mostrarViviendas(eVivienda* lista, int tam, eTipo* tipos, int tamT);
+int mostrarViviendas(eVivienda* lista, int tam, eTipo* tipos, int tamT, eCensista* censistas);
 
 /** Ordena a las viviendas por calle y ante igualdad de calle, por la cantidad de habitantes, de mayor a menor
  *
@@ -106,3 +105,5 @@ int mostrarViviendas(eVivienda* lista, int tam, eTipo* tipos, int tamT);
  * @return retorno devuelve -1 si hubo un error, de lo contrario 0
  */
 int ordenarViviendas(eVivienda* lista, int tam);
+
+int contadorCensos(eVivienda* lista, int tam);

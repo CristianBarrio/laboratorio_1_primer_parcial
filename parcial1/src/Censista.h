@@ -10,13 +10,14 @@
 
 #include "utn.h"
 #define TAM_NOMBRE 25
+#define TAM_TELEFONO 15
 
 typedef struct
 {
 	int legajoCensista;
 	char nombre[TAM_NOMBRE];
 	int edad;
-	char telefono[15];
+	char telefono[TAM_TELEFONO];
 }eCensista;
 
 #endif /* CENSISTA_H_ */
